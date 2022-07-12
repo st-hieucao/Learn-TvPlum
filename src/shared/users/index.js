@@ -1,4 +1,4 @@
-import { collection, getDocs } from "firebase/firestore/lite";
+import { collection, getDocs, addDoc } from "firebase/firestore/lite";
 import db from "../../service/firebase";
 
 const getAllUser = async () => {
@@ -8,6 +8,11 @@ const getAllUser = async () => {
   return userList;
 }
 
+const addUser = async (data) => {
+  const userCol = collection(db, 'users');
+  addDoc(userCol, data)
+}
+
 export {
-  getAllUser
+  getAllUser, addUser
 }

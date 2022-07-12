@@ -1,0 +1,14 @@
+{
+  "dark" : {
+    "colors": {
+      "primary": "yellow",
+      "secondary": "brown"
+    }
+  },
+  "light" : {
+    "colors": {
+      "primary": "red",
+      "secondary": "pink"
+    }
+  }
+}

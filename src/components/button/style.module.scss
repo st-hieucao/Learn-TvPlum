@@ -1,0 +1,21 @@
+:global {
+  .btn {
+    @apply h-10 bg-transparent border-none;
+
+    &:disabled {
+      background-color: black;
+    }
+
+    &.primary {
+      @apply bg-lime-500 text-white;
+    }
+
+    &.danger {
+      @apply bg-red-600 text-white;
+    }
+
+    &.outline {
+      @apply border border-solid border-lime-500 text-lime-500;
+    }
+  }
+}
