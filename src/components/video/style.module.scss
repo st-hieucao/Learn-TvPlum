@@ -3,129 +3,12 @@
   .video-js-custom {
     @apply w-full h-full;
     height: 500px;
-    .video-js.vjs-mobile .vjs-control-bar {
-      @apply m-0 h-full;
-      .vjs-loading-spinner {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      .vjs-mini-btn {
-        @apply hidden;
-      }
-      .vjs-fullscreen-control {
-        @apply block absolute right-1 top-2 m-0;
-        height: 4em;
-        .vjs-icon-placeholder::before {
-          font-size: 3.4em;
-          line-height: 0.95;
-        }
-      }
-      .vjs-progress-control {
-        @apply bottom-0;
-        top: unset;
-        .vjs-mouse-display .vjs-time-tooltip {
-          @apply top-1 #{!important};
-        }
-      }
-      .vjs-progress-holder {
-        @apply m-0;
-      }
-      .vjs-time-control {
-        @apply my-0;
-        height: 2em;
-        margin-top: -2.1rem;
-        bottom: -100%;
-        position: relative;
-        order: -1;
-        flex: none;
-      }
-      .vjs-current-time,
-      .vjs-duration {
-        margin-top: -2rem;
-      }
-      .vjs-current-time {
-        margin-left: 0.5rem;
-      }
-      .vjs-volume-panel,
-      .vjs-expand-btn,
-      .vjs-theater-mode-btn {
-        @apply hidden #{!important};
-      }
-      .vjs-play-control {
-        @apply absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 6em;
-        width: 6em;
-        margin: 0;
-        .vjs-icon-placeholder::before {
-          font-size: 6em;
-        }
-      }
-      .vjs-next-video-btn {
-        @apply absolute flex items-center h-9 right-2 bottom-2 m-0;
-        .vjs-icon-placeholder {
-          @apply absolute right-8 bottom-8;
-          &::before {
-            font-family: "Material Icons";
-            content: "\e044";
-          }
-        }
-        .vjs-control-text {
-          position: unset;
-          @apply w-auto h-auto;
-        }
-      }
-      .vjs-backward-10s-btn,
-      .vjs-forward-10s-btn {
-        @apply absolute;
-        height: 4rem;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      .vjs-forward-10s-btn {
-        @apply right-1/2 -mr-32;
-        &::before {
-          font-family: "Material Icons";
-          content: "\e056";
-          font-size: 4em;
-        }
-      }
-      .vjs-backward-10s-btn {
-        @apply left-1/2 -ml-32;
-        &::before {
-          font-family: "Material Icons";
-          content: "\e059";
-          font-size: 4em;
-        }
-      }
-      .hide {
-        @apply hidden #{!important};
-      }
-    }
-
-    .video-js.vjs-tablet .vjs-control-bar {
-      .vjs-volume-panel,
-      .vjs-theater-mode-btn {
-        @apply hidden;
-      }
-    }
-
-    .video-js.vjs-tablet {
-      .vjs-next-episode-btn {
-        .vjs-icon-placeholder {
-          &::before {
-            font-size: 2.4em;
-          }
-        }
-      }
-    }
 
     .video-js {
       .vjs-control-bar {
         @apply h-6 mb-4 bg-transparent;
+        z-index: 10000;
+        background: black
       }
 
       .vjs-mouse-display {
@@ -140,18 +23,28 @@
         @apply absolute w-full h-auto -top-3;
         &:hover {
           .vjs-play-progress.vjs-slider-bar::before {
-            @apply visible;
+            right: -8px;
+            top: -5px;
+            content: '';
+            width: 14px;
+            height: 14px;
+            background: red;
+            visibility: visible;
+            transition: .3s;
           }
         }
         .vjs-load-progress {
+          background: #eee;
           div {
             @apply opacity-50;
           }
           @apply opacity-50;
         }
         .vjs-play-progress.vjs-slider-bar {
+          background: red;
           &::before {
             @apply invisible;
+            border-radius: 50%;
           }
           .vjs-time-tooltip {
             @apply hidden;
@@ -299,19 +192,45 @@
       }
     }
 
-    .vjs-hidden-element {
-      .vjs-next-episode-btn {
-        @apply hidden #{!important};
+    // ads style
+    .vjs_video_3_ima-ad-container {
+      .ima-controls-div {
+        position: absolute;
+        bottom: 50px;
+        background: transparent;
+        overflow: hidden;
       }
     }
-  }
-
-  custom video-normal-mode
-  .video-normal-mode,
-  .video-theater-mode {
-    .vjs-expand-btn,
-    .vjs-close-btn {
-      @apply hidden;
+    .vjs_video_3_ima-countdown-div {
+      padding: 0 10px;
+    }
+    .vjs_video_3_ima-seek-bar-div {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      height: 3px;
+      background: #eee;
+      width: auto !important;
     }
   }
+  // skip ad 
 }
+// .videoAdUi {
+//   .videoAdUiBottomBar {
+//     display: none;
+//     .videoAdUiSkipWidgetV2 {
+//       .videoAdUiPreSkipContainer {
+//         bottom: 50px;
+//       }
+//     }
+//   }
+// }
+// .videoAdUiSkipButton {
+//   position: absolute;
+//   right: 0;
+//   bottom: 50px;
+// }
+// .raisedSkipButton.videoAdUiSkipWidgetV2 .videoAdUiPreSkipContainer, .raisedSkipButton.videoAdUiSkipWidgetV2 .videoAdUiSkipContainer, .gma-instream .videoAdUiSkipWidgetV2 .videoAdUiPreSkipContainer, .gma-instream .videoAdUiSkipWidgetV2 .videoAdUiSkipContainer {
+//   bottom: 50px;
+// }
+
