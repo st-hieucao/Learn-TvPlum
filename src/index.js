@@ -4,13 +4,13 @@ import App from './App';
 import './i18n';
 import './index.css';
 import { BrowserRouter as Router} from 'react-router-dom';
-import { ThemeProvider } from './components/themes';
+// import { ThemeProvider } from './components/themes';
 // import { DialogProvider } from './components/dialogs/Provider';
 // import PortalDialogs from './components/dialogs/PortalDialogs';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
+    {/* <ThemeProvider> */}
       {/* <DialogProvider> */}
         {/* <PortalDialogs> */}
           <Router>
@@ -18,7 +18,7 @@ ReactDOM.render(
           </Router>
         {/* </PortalDialogs> */}
       {/* </DialogProvider> */}
-    </ThemeProvider>
+    {/* </ThemeProvider> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
