@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore/lite';
-import { getAnalytics, logEvent, setUserProperties } from "firebase/analytics";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyARylfNxYFM0wGHaVLc_j_Q7NxAxHY9YqA",
@@ -18,13 +18,8 @@ const db = getFirestore(app);
 
 export const analytics = getAnalytics(app);
 export const logEventFirebase = () => {
-  // setUserProperties(analytics, { favorite_food: 'apples' });
-  // logEvent(analytics, 'screen_view', {
-  //   firebase_screen: 'Demo app', 
-  //   firebase_screen_class: 'Demo app 2'
-  // });
   const data = {
-    name: 'Hieu'
+    random: Math.random(),
   }
   return logEvent(analytics, 'video_views', data)
 }
