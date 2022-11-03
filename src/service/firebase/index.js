@@ -21,6 +21,7 @@ export const logEventFirebase = () => {
   const data = {
     random: Math.random(),
   }
+  console.log('loggg', data)
   return logEvent(analytics, 'video_views', data)
 }
 logEventFirebase();
