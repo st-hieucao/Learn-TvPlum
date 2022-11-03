@@ -2,9 +2,16 @@
 :global {
   .video-js-custom {
     @apply w-full h-full;
-    height: 500px;
+    height: 543px;
+    width: 964px;
+    & > div {
+      height: 100%;
+      width: 100%;
+    }
 
     .video-js {
+      height: 100%;
+      width: 100%;
       .vjs-control-bar {
         @apply h-6 mb-4 bg-transparent;
         z-index: 10000;
