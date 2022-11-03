@@ -1,5 +1,4 @@
-import classNames from 'classnames';
-import React, { Children, createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import './style.scss';
 
 export const DialogContext = createContext();
@@ -44,7 +43,7 @@ const DialogProvider = (props) => {
 }
 
 const Dialog = (props) => {
-  const { title, description, onClick, close} = props;
+  const { title, description, onClick} = props;
   const { closeDialog } = useContext(DialogContext);
 
   return (
