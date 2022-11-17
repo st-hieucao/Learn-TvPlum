@@ -17,6 +17,7 @@
     "install": "^0.13.0",
     "link": "^1.5.0",
     "node-sass": "^7.0.1",
+    "node-webvtt": "^1.9.4",
     "npm": "^8.15.1",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",

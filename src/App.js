@@ -1,4 +1,4 @@
-// import Routes from './routes';
+import Routes from './routes';
 // import Button from './components/button';
 // import ThemesApply, { ThemeContext } from './components/themes';
 // import { useContext, useState } from 'react';
@@ -12,11 +12,13 @@
 // import ErrorDialog from './components/dialogs/template/ErrorDialog';
 // import PortalDialogs, { DialogPortalContext } from './components/dialogs/PortalDialogs';
 // import NotificationDialog from './components/dialogs/portalDialogs/NotificationDialog';
-// import VideoJS from './components/video';
+// import InterView from './components/interview';
+import VideoJS from './components/video';
+// import VTT from './components/vtt';
 // import Firebase from './components/firebase';
 // import ReactForm from './components/react-hook-form';
 // import DynamicLinks from './components/dynamic-links';
-import Analytic from './components/analytic';
+// import Analytic from './components/analytic';
 
 function App() {
   // const { theme, handleChangeTheme } = useContext(ThemeContext);
@@ -54,13 +56,13 @@ function App() {
       {/* <ReactForm /> */}
       
       {/* Implement ads in video ---------------------------- */}
-      {/* <div>
+      <div>
         <h4>Implement Ads in video</h4>
         <VideoJS />
-      </div> */}
+      </div>
 
       {/* i18next ---------------------------  */}
-      {/* <Routes /> */}
+      <Routes />
 
       {/* <Firebase /> */}
 
@@ -113,8 +115,11 @@ function App() {
       {/* <button onClick={handleShowDialogPortal}>Show dialog using Portal</button> */}
 
       {/* Analytic */}
-      <h2>Analytic</h2>
-      <Analytic />
+      {/* <h2>Analytic</h2>
+      <Analytic /> */}
+
+      {/* <VTT /> */}
+
     </div>
   );
 }
